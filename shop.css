@@ -1,0 +1,64 @@
+.shop-head{padding:180px 48px 56px;max-width:1300px;margin:0 auto}
+.shop-eyebrow{font-family:var(--label);font-size:11px;letter-spacing:.42em;
+  text-transform:uppercase;color:var(--cream-faint);margin-bottom:34px;font-weight:400}
+.shop-title{font-size:clamp(42px,7vw,90px);font-weight:300;line-height:1.0;
+  letter-spacing:.005em;font-style:italic}
+
+.shop-filters{display:flex;align-items:center;gap:14px;padding:0 48px 56px;
+  max-width:1300px;margin:0 auto;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.filter{background:none;border:1px solid var(--line);cursor:pointer;
+  font-family:var(--label);font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:400;
+  color:var(--cream-dim);padding:10px 20px;border-radius:0;transition:.4s}
+.filter:hover{color:var(--cream);border-color:var(--cream-dim)}
+.filter.active{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+.shop-count{margin-left:auto;font-family:var(--mono);font-size:10px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--cream-faint)}
+
+.shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;
+  max-width:1300px;margin:0 auto;padding:56px 48px 130px}
+
+@media(max-width:820px){
+  .shop-head{padding:140px 24px 44px}
+  .shop-filters{padding:0 24px 40px}
+  .shop-grid{grid-template-columns:1fr;gap:4px;padding:40px 24px 100px}
+  .shop-count{display:none}
+}
+
+/* ---------- cart drawer ---------- */
+.cart-overlay{position:fixed;inset:0;background:rgba(6,6,6,.62);backdrop-filter:blur(3px);
+  opacity:0;pointer-events:none;transition:opacity .5s;z-index:950}
+.cart-overlay.open{opacity:1;pointer-events:auto}
+.cart-drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,90vw);
+  background:#080808;border-left:1px solid var(--line);z-index:960;
+  transform:translateX(100%);transition:transform .6s cubic-bezier(.19,1,.22,1);
+  display:flex;flex-direction:column;padding:36px}
+.cart-drawer.open{transform:none}
+.cart-head{display:flex;justify-content:space-between;align-items:center;
+  padding-bottom:30px;border-bottom:1px solid var(--line)}
+.cart-head span{font-family:var(--label);font-size:11px;letter-spacing:.26em;text-transform:uppercase;font-weight:400}
+.cart-head button{background:none;border:none;color:var(--cream);font-size:17px;cursor:pointer;opacity:.55;transition:.3s}
+.cart-head button:hover{opacity:1}
+.cart-items{flex:1;overflow-y:auto;padding:26px 0}
+.cart-empty{font-family:var(--mono);font-size:12px;color:var(--cream-faint);
+  letter-spacing:.04em;text-align:center;padding:64px 0;line-height:2.1}
+.cart-line{display:flex;justify-content:space-between;align-items:flex-start;
+  padding:22px 0;border-bottom:1px solid var(--line)}
+.cart-line-name{font-size:20px;font-style:italic;font-weight:300;margin-bottom:6px}
+.cart-line-meta{font-family:var(--mono);font-size:10px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--cream-faint)}
+.cart-line-right{text-align:right;display:flex;flex-direction:column;gap:9px;align-items:flex-end}
+.cart-line-price{font-family:var(--mono);font-size:12px;color:var(--cream-dim)}
+.cart-line-rm{font-family:var(--mono);font-size:9px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--cream-faint);background:none;border:none;
+  cursor:pointer;text-decoration:underline;text-underline-offset:3px;transition:.3s}
+.cart-line-rm:hover{color:var(--cream)}
+.cart-foot{padding-top:26px;border-top:1px solid var(--line)}
+.cart-total{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px}
+.cart-total span:first-child{font-family:var(--label);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--cream-dim);font-weight:400}
+.cart-total span:last-child{font-family:var(--mono);font-size:16px}
+.cart-checkout{width:100%;background:var(--cream);color:var(--ink);border:none;cursor:pointer;
+  font-family:var(--label);font-size:11px;letter-spacing:.26em;text-transform:uppercase;font-weight:500;
+  padding:19px;transition:opacity .4s}
+.cart-checkout:hover{opacity:.85}
+.cart-note{text-align:center;margin-top:17px;font-family:var(--mono);font-size:9px;
+  letter-spacing:.08em;color:var(--cream-faint)}

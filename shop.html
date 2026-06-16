@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — solo tu</title>
+<meta name="description" content="Alle Stücke von solo tu. Schwarze Shirts als Einzelstücke.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="shop.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="solo tu"></a>
+  <button class="nav-toggle" aria-label="Menu" onclick="document.body.classList.toggle('menu-open')"><span></span><span></span></button>
+  <div class="nav-links">
+    <a href="shop.html">Shop</a>
+    <a href="index.html#manifest">Haltung</a>
+    <a href="index.html#atelier">Atelier</a>
+    <a href="#" class="nav-bag" onclick="openCart();return false;">Bag <span id="bag-count">(0)</span></a>
+  </div>
+</nav>
+
+<header class="shop-head">
+  <p class="shop-eyebrow">Alle Stücke</p>
+  <h1 class="shop-title">Das schwarze Shirt,<br><em>sechs Mal gedacht.</em></h1>
+</header>
+
+<div class="shop-filters">
+  <button class="filter active" data-filter="all">Alle</button>
+  <button class="filter" data-filter="boxy">Boxy</button>
+  <button class="filter" data-filter="long">Long</button>
+  <button class="filter" data-filter="regular">Regular</button>
+  <span class="shop-count" id="shop-count"></span>
+</div>
+
+<main class="shop-grid" id="shop-grid"></main>
+
+<footer class="foot">
+  <div class="foot-top">
+    <img src="logo.png" alt="solo tu" class="foot-logo">
+    <div class="foot-cols">
+      <div class="foot-col"><span>Shop</span><a href="shop.html">Alle Stücke</a><a href="shop.html">Neu</a></div>
+      <div class="foot-col"><span>Haus</span><a href="index.html#manifest">Haltung</a><a href="index.html#atelier">Atelier</a></div>
+      <div class="foot-col"><span>Kontakt</span><a href="mailto:hey@solotu.ch">hey@solotu.ch</a><a href="#">Instagram</a></div>
+    </div>
+  </div>
+  <div class="foot-bottom"><span>© 2026 solo tu · Zürich</span><span>Made once.</span></div>
+</footer>
+
+<!-- cart drawer -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<aside class="cart-drawer" id="cart-drawer">
+  <div class="cart-head">
+    <span>Deine Bag</span>
+    <button onclick="closeCart()" aria-label="Schliessen">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Summe</span><span id="cart-total">CHF 0</span></div>
+    <button class="cart-checkout" onclick="checkout()">Zur Kasse</button>
+    <p class="cart-note">Versand Schweiz &amp; EU · Steuer inkl.</p>
+  </div>
+</aside>
+
+<script src="products.js"></script>
+<script src="main.js"></script>
+<script src="shop.js"></script>
+</body>
+</html>

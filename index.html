@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>solo tu — wear nothing borrowed</title>
+<meta name="description" content="solo tu. Schwarze Shirts als Einzelstücke. Minimal. Schwarzweiss. Zürich.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="solo tu"></a>
+  <button class="nav-toggle" aria-label="Menu" onclick="document.body.classList.toggle('menu-open')"><span></span><span></span><span></span></button>
+  <div class="nav-links">
+    <a href="shop.html">Shop</a>
+    <a href="#manifest">Haltung</a>
+    <a href="#atelier">Atelier</a>
+    <a href="shop.html" class="nav-bag">Bag <span id="bag-count">(0)</span></a>
+  </div>
+</nav>
+
+<!-- HERO — single atmospheric image, signature over it -->
+<header class="hero">
+  <div class="hero-media" data-ph="Hero · schwarzes Shirt, Nahaufnahme Stoff">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <img src="logo.png" alt="solo tu" class="hero-logo">
+    <p class="hero-tagline">Master of the black shirt · Zürich</p>
+    <div class="hero-lines">
+      <span>Wear nothing borrowed</span>
+      <span>Wear nothing loud</span>
+      <span>Wear only you</span>
+    </div>
+    <a href="shop.html" class="hero-cta">Ein Stück finden</a>
+  </div>
+</header>
+
+<!-- MANIFEST — poetic, spare -->
+<section class="manifest" id="manifest">
+  <div class="manifest-inner">
+    <p class="manifest-line" data-reveal>Kein Trend.</p>
+    <p class="manifest-line" data-reveal>Keine Kollektion.</p>
+    <p class="manifest-line dim" data-reveal>Ein schwarzes Shirt, <em>gemacht für dich.</em></p>
+  </div>
+</section>
+
+<!-- IMAGE PAIR -->
+<section class="pair">
+  <div class="pair-img" data-ph="Detail · Naht / Kragen"></div>
+  <div class="pair-img" data-ph="Editorial · getragen, Körper"></div>
+</section>
+
+<!-- THE WORK -->
+<section class="work" id="work">
+  <span class="eyebrow" data-reveal>Die Arbeit</span>
+  <blockquote class="work-quote" data-reveal>
+    "Ein Shirt fürs Leben.<br>Keine Saison."
+  </blockquote>
+  <div class="work-body" data-reveal>
+    <p>solo tu macht keine Kollektionen. Ein Schnitt nach dem anderen — schwarz, einfach, sorgfältig. Der Stoff wird von Hand gewählt. Jede Naht sitzt mit Absicht.</p>
+    <p>Das ist keine Marke. Es ist eine Haltung — das schwarze Shirt als zweite Haut, gefertigt um getragen zu werden, nicht um gesehen zu werden.</p>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="featured" id="featured">
+  <div class="featured-head">
+    <span class="eyebrow">Aktuell</span>
+    <h2 class="featured-title">Drei Schnitte</h2>
+  </div>
+  <div class="featured-grid" id="featured-grid"></div>
+  <a href="shop.html" class="link-underline">Alle Stücke ansehen</a>
+</section>
+
+<!-- ATELIER -->
+<section class="atelier" id="atelier">
+  <div class="atelier-img" data-ph="Atelier · Hände, Stoff, Werkstatt"></div>
+  <div class="atelier-text" data-reveal>
+    <span class="eyebrow">Atelier</span>
+    <p class="atelier-quote">Jedes Shirt wird in kleiner Zahl gefertigt. Ist es weg, ist es weg.</p>
+    <p class="atelier-detail">100% organische Baumwolle, schwer und weich zugleich. Genäht in Portugal. Gefärbt in einem Schwarz, das nicht ausbleicht — garment-dyed, Stück für Stück.</p>
+    <div class="atelier-pledge">
+      <span>Jedes Stück einmal gemacht</span>
+      <span>Jedes Stück für einen</span>
+      <span>Jedes Stück aus einem Schwarz</span>
+    </div>
+  </div>
+</section>
+
+<!-- COMMISSION / NEWSLETTER -->
+<section class="commission">
+  <span class="eyebrow" data-reveal>Bleib in der Nähe</span>
+  <p class="commission-quote" data-reveal>Wenn du etwas suchst, das in zwanzig Jahren noch deins ist — schreib uns.</p>
+  <form class="signup-form" onsubmit="return false;">
+    <input type="email" placeholder="deine@email.ch" aria-label="E-Mail">
+    <button type="submit">Eintragen</button>
+  </form>
+</section>
+
+<footer class="foot">
+  <img src="logo.png" alt="solo tu" class="foot-logo">
+  <div class="foot-meta">
+    <span>© 2026 solo tu</span>
+    <span>·</span>
+    <span>Das schwarze Shirt</span>
+    <span>·</span>
+    <span>Zürich</span>
+    <span>·</span>
+    <a href="#">Impressum</a>
+    <span>·</span>
+    <a href="#">Datenschutz</a>
+  </div>
+</footer>
+
+<script src="products.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
