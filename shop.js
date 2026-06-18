@@ -7,7 +7,7 @@ function teeType(p){ return p.tee==='crop'?'boxy':p.tee==='pocket'?'regular':p.t
 function renderShop(){
   const list = PRODUCTS.filter(p=> active==='all' || teeType(p)===active);
   grid.innerHTML = list.map(cardHTML).join('');
-  countEl.textContent = `${list.length} Stück${list.length!==1?'e':''}`;
+  countEl.textContent = `${list.length} piece${list.length!==1?'s':''}`;
 }
 document.querySelectorAll('.filter').forEach(b=>{
   b.addEventListener('click',()=>{
@@ -25,13 +25,13 @@ function closeCart(){ document.getElementById('cart-drawer').classList.remove('o
 function renderCartPanel(){
   const box=document.getElementById('cart-items');
   if(!box) return;
-  if(Cart.items.length===0){ box.innerHTML='<p class="cart-empty">Noch leer.<br>Such dir dein Schwarz.</p>'; }
+  if(Cart.items.length===0){ box.innerHTML='<p class="cart-empty">Still empty.<br>Find your black.</p>'; }
   else{
     box.innerHTML = Cart.items.map(it=>`<div class="cart-line">
       <div><div class="cart-line-name">${it.name}</div>
-      <div class="cart-line-meta">Grösse ${it.size} · ×${it.qty}</div></div>
+      <div class="cart-line-meta">Size ${it.size} · ×${it.qty}</div></div>
       <div class="cart-line-right"><span class="cart-line-price">CHF ${it.price*it.qty}</span>
-      <button class="cart-line-rm" onclick="Cart.remove('${it.id}','${it.size}')">entfernen</button></div>
+      <button class="cart-line-rm" onclick="Cart.remove('${it.id}','${it.size}')">remove</button></div>
     </div>`).join('');
   }
   document.getElementById('cart-total').textContent=`CHF ${Cart.total()}`;

@@ -20,7 +20,7 @@ if(fg) PRODUCTS.slice(0,3).forEach(p=>fg.insertAdjacentHTML('beforeend',cardHTML
 
 function cardHTML(p){
   return `<a class="card" href="product.html?id=${p.id}">
-    <div class="card-img" data-ph="${p.name} · Produktfoto">${p.tag?`<span class="card-tag">${p.tag}</span>`:''}</div>
+    <div class="card-img" data-ph="${p.name} · Product photo">${p.tag?`<span class="card-tag">${p.tag}</span>`:''}</div>
     <div class="card-meta">
       <div class="card-name">${p.name}</div>
       <div class="card-row"><span class="card-cut">${p.cut}</span><span class="card-price">CHF ${p.price}</span></div>

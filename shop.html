@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shop — solo tu</title>
-<meta name="description" content="Alle Stücke von solo tu. Schwarze Shirts als Einzelstücke.">
+<meta name="description" content="All pieces by solo tu. Black shirts as single pieces.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -18,19 +18,19 @@
   <button class="nav-toggle" aria-label="Menu" onclick="document.body.classList.toggle('menu-open')"><span></span><span></span></button>
   <div class="nav-links">
     <a href="shop.html">Shop</a>
-    <a href="index.html#manifest">Haltung</a>
+    <a href="index.html#manifest">Ethos</a>
     <a href="index.html#atelier">Atelier</a>
     <a href="#" class="nav-bag" onclick="openCart();return false;">Bag <span id="bag-count">(0)</span></a>
   </div>
 </nav>
 
 <header class="shop-head">
-  <p class="shop-eyebrow">Alle Stücke</p>
-  <h1 class="shop-title">Das schwarze Shirt,<br><em>sechs Mal gedacht.</em></h1>
+  <p class="shop-eyebrow">All pieces</p>
+  <h1 class="shop-title">The black shirt,<br><em>thought six ways.</em></h1>
 </header>
 
 <div class="shop-filters">
-  <button class="filter active" data-filter="all">Alle</button>
+  <button class="filter active" data-filter="all">All</button>
   <button class="filter" data-filter="boxy">Boxy</button>
   <button class="filter" data-filter="long">Long</button>
   <button class="filter" data-filter="regular">Regular</button>
@@ -43,26 +43,26 @@
   <div class="foot-top">
     <img src="logo.png" alt="solo tu" class="foot-logo">
     <div class="foot-cols">
-      <div class="foot-col"><span>Shop</span><a href="shop.html">Alle Stücke</a><a href="shop.html">Neu</a></div>
-      <div class="foot-col"><span>Haus</span><a href="index.html#manifest">Haltung</a><a href="index.html#atelier">Atelier</a></div>
-      <div class="foot-col"><span>Kontakt</span><a href="mailto:hey@solotu.ch">hey@solotu.ch</a><a href="#">Instagram</a></div>
+      <div class="foot-col"><span>Shop</span><a href="shop.html">All pieces</a><a href="shop.html">New</a></div>
+      <div class="foot-col"><span>House</span><a href="index.html#manifest">Ethos</a><a href="index.html#atelier">Atelier</a></div>
+      <div class="foot-col"><span>Contact</span><a href="mailto:ciao@solo-tu.com">ciao@solo-tu.com</a><a href="https://instagram.com/solo_tu_online">Instagram</a></div>
     </div>
   </div>
-  <div class="foot-bottom"><span>© 2026 solo tu · Zürich</span><span>Made once.</span></div>
+  <div class="foot-bottom"><span>© 2026 solo tu · Zürich</span><span><a href="impressum.html">Imprint</a> · <a href="datenschutz.html">Privacy</a></span><span>Made once.</span></div>
 </footer>
 
 <!-- cart drawer -->
 <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
 <aside class="cart-drawer" id="cart-drawer">
   <div class="cart-head">
-    <span>Deine Bag</span>
-    <button onclick="closeCart()" aria-label="Schliessen">✕</button>
+    <span>Your bag</span>
+    <button onclick="closeCart()" aria-label="Close">✕</button>
   </div>
   <div class="cart-items" id="cart-items"></div>
   <div class="cart-foot">
-    <div class="cart-total"><span>Summe</span><span id="cart-total">CHF 0</span></div>
-    <button class="cart-checkout" onclick="checkout()">Zur Kasse</button>
-    <p class="cart-note">Versand Schweiz &amp; EU · Steuer inkl.</p>
+    <div class="cart-total"><span>Total</span><span id="cart-total">CHF 0</span></div>
+    <button class="cart-checkout" onclick="checkout()">Checkout</button>
+    <p class="cart-note">Shipping Switzerland &amp; EU · Tax incl.</p>
   </div>
 </aside>
 
